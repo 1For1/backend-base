@@ -1,0 +1,13 @@
+celery
+redis
+
+# Mongo related
+pymongo
+bson
+
+
+# For ocr
+pillow>=2.2
+reportlab>=2.7
+watchdog>=0.6.0
+pypdf2>=1.23
