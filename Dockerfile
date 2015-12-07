@@ -4,6 +4,9 @@ LABEL version="1.0.0"
 
 RUN adduser --disabled-password --gecos '' ocr
 
+ADD requirements.txt /app/requirements.txt
+WORKDIR /app/
+
 # Base
 RUN apt-get update
 RUN apt-get install -y autoconf \
