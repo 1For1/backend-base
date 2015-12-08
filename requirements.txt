@@ -1,13 +1,23 @@
+# Tasks
 celery
 redis
+flower
 
 # Mongo related
 pymongo
 bson
 
 
-# For ocr
+# json
+anyjson
+
+# For pypdfocr
 pillow>=2.2
 reportlab>=2.7
 watchdog>=0.6.0
 pypdf2>=1.23
+
+
+# Test
+nose
+coverage
