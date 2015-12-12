@@ -2,6 +2,7 @@ FROM oneforone/backend-base:latest
 MAINTAINER 1For1
 LABEL version "1.0.0"
 
+# Add in Jenkins User
 RUN adduser --disabled-password --gecos '' ocr
 RUN echo -e "jenkins\njenkins" | passwd jenkins
 
