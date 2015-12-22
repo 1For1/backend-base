@@ -15,24 +15,18 @@ RUN apt-get install -y apt-transport-https \
 
 
 # Base
-RUN apt-get update
-RUN apt-get install -y autoconf \
+RUN apt-get update \
+    && apt-get install -y autoconf \
                           build-essential \
                           git \
                           liblept4 \
                           libleptonica-dev \
                           libgomp1 \
-                          libtool
-
-# Install python 3
-RUN apt-get install -y python3 python
-
-# Install Tesseract
-RUN apt-get install -y tesseract-ocr tesseract-ocr-eng
-
-# Install pypdfocr
-RUN apt-get install -y libjpeg-dev zlib1g-dev
-RUN apt-get install -y python-pip python-dev imagemagick poppler-utils
+                          libtool \
+    && apt-get install -y python3 python libxml2-dev libxslt1-dev \
+    && apt-get install -y tesseract-ocr tesseract-ocr-eng \
+    && apt-get install -y libjpeg-dev zlib1g-dev \
+    && apt-get install -y python-pip python-dev imagemagick poppler-utils
 
 # Install requirements
 RUN pip install -r requirements.txt

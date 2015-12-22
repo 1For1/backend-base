@@ -18,3 +18,7 @@ pypdf2>=1.23
 # Test
 nose
 coverage
+
+# Extraction
+pdfminer2
+docx
