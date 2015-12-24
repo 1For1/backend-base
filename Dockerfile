@@ -25,15 +25,11 @@ RUN apt-get update \
                           libtool \
     && apt-get install -y python3 python libxml2-dev libxslt1-dev \
     && apt-get install -y tesseract-ocr tesseract-ocr-eng \
-    && apt-get install -y libjpeg-dev zlib1g-dev \
-    && apt-get install -y python-pip python-dev imagemagick poppler-utils
-
-# Install requirements
-RUN pip install -r requirements.txt
-
-# Make folder
-RUN mkdir /data
-RUN chown -R ocr:ocr /data
+    && apt-get install -y libjpeg-dev zlib1g-dev antiword \
+    && apt-get install -y python-pip python-dev imagemagick poppler-utils \
+    && pip install -r requirements.txt \
+    && mkdir /data \
+    && chown -R ocr:ocr /data
 
 # Cleanup
 RUN apt-get purge --auto-remove -y autoconf \
