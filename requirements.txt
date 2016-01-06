@@ -23,7 +23,7 @@ coverage
 pdfminer2
 docx
 
-# NLP
+# Entity Extraction
 nltk
 usaddress
 nameparser
