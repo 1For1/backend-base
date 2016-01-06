@@ -22,3 +22,10 @@ coverage
 # Extraction
 pdfminer2
 docx
+
+# NLP
+nltk
+usaddress
+nameparser
+probablepeople
+phonenumbers
