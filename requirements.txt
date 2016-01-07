@@ -3,11 +3,13 @@ redis
 flower
 
 # Mongo related
-pymongo
 bson
+pymongo
 
 # json
 anyjson
+
+# Math
 numpy
 
 # For ocr
