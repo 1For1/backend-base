@@ -30,22 +30,7 @@ RUN apt-get update \
     && pip install -r requirements.txt \
     && mkdir /data \
     && chown -R ocr:ocr /data \
-    && python -m nltk.downloader -d /usr/share/nltk_data brown \
-    && python -m nltk.downloader -d /usr/share/nltk_data punkt \
-    && python -m nltk.downloader -d /usr/share/nltk_data hmm_treebank_pos_tagger
-    && python -m nltk.downloader -d /usr/share/nltk_data maxent_treebank_pos_tagger
-
-
-#RUN python3 -m nltk.downloader -d /usr/share/nltk_data treebank
-#RUN python3 -m nltk.downloader -d /usr/share/nltk_data sinica_treebank
-#
-#RUN
-#
-#RUN python3 -m nltk.downloader -d /usr/share/nltk_data words
-#RUN python3 -m nltk.downloader -d /usr/share/nltk_data stopwords
-#RUN python3 -m nltk.downloader -d /usr/share/nltk_data names
-#
-#RUN python3 -m nltk.downloader -d /usr/share/nltk_data wordnet
+    && python -m nltk.downloader -d /usr/share/nltk_data all
 
 # Cleanup
 RUN apt-get purge --auto-remove -y autoconf \
