@@ -4,7 +4,7 @@ flower
 
 # Mongo related
 pymongo
-# bson
+bson
 
 # json
 anyjson
