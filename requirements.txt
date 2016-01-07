@@ -3,7 +3,7 @@ redis
 flower
 
 # Mongo related
-bson
+# bson
 pymongo
 
 # json
