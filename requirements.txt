@@ -24,6 +24,7 @@ pdfminer2
 docx
 
 # Entity Extraction
+
 nltk
 usaddress
 nameparser
