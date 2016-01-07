@@ -29,17 +29,17 @@ RUN apt-get update \
     && apt-get install -y python-pip python-dev imagemagick poppler-utils \
     && pip install -r requirements.txt \
     && mkdir /data \
-    && chown -R ocr:ocr /data
+    && chown -R ocr:ocr /data \
+    && python -m nltk.downloader -d /usr/share/nltk_data brown \
+    && python -m nltk.downloader -d /usr/share/nltk_data punkt \
+    && python -m nltk.downloader -d /usr/share/nltk_data hmm_treebank_pos_tagger
+    && python -m nltk.downloader -d /usr/share/nltk_data maxent_treebank_pos_tagger
 
-# Some corpus for nltk
-RUN python -m nltk.downloader -d /usr/share/nltk_data brown \
-    && python -m nltk.downloader -d /usr/share/nltk_data punkt
 
 #RUN python3 -m nltk.downloader -d /usr/share/nltk_data treebank
 #RUN python3 -m nltk.downloader -d /usr/share/nltk_data sinica_treebank
 #
-#RUN python3 -m nltk.downloader -d /usr/share/nltk_data hmm_treebank_pos_tagger
-#RUN python3 -m nltk.downloader -d /usr/share/nltk_data maxent_treebank_pos_tagger
+#RUN
 #
 #RUN python3 -m nltk.downloader -d /usr/share/nltk_data words
 #RUN python3 -m nltk.downloader -d /usr/share/nltk_data stopwords
