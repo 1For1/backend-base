@@ -4,10 +4,11 @@ flower
 
 # Mongo related
 pymongo
-bson
+# bson
 
 # json
 anyjson
+numpy
 
 # For ocr
 pillow>=2.2
@@ -24,7 +25,6 @@ pdfminer2
 docx
 
 # Entity Extraction
-
 nltk
 usaddress
 nameparser
