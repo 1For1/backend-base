@@ -32,3 +32,5 @@ usaddress
 nameparser
 probablepeople
 phonenumbers
+uszipcode
+python-dateutil
