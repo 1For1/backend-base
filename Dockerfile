@@ -29,6 +29,7 @@ RUN apt-get update \
     && pip install -r requirements.txt \
     && mkdir /data \
     && chown -R ocr:ocr /data \
+    && chmod 777 /usr/local/lib/python2.7/dist-packages/uszipcode/data \
     && python -m nltk.downloader -d /usr/share/nltk_data punkt \
     && python -m nltk.downloader -d /usr/share/nltk_data averaged_perceptron_tagger \
     && python -m nltk.downloader -d /usr/share/nltk_data maxent_ne_chunker \
