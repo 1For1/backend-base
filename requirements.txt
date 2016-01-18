@@ -23,7 +23,7 @@ nose
 coverage
 
 # Extraction
-pdfminer2
+pdfminer
 docx
 
 # Entity Extraction
