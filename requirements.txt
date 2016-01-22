@@ -34,3 +34,9 @@ probablepeople
 phonenumbers
 uszipcode
 python-dateutil
+
+# Others collected from recent branch build
+google
+pdfminer
+olefile
+beautifulsoup4
