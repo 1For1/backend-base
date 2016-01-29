@@ -27,7 +27,6 @@ coverage
 
 # Extraction
 pdfminer
-docx
 
 # Entity Extraction
 nltk
@@ -40,7 +39,6 @@ python-dateutil
 
 # Others collected from recent branch build
 google
-pdfminer
 olefile
 beautifulsoup4
 
