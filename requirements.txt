@@ -7,15 +7,22 @@ flower
 # bson
 pymongo
 
+
+# Math
+numpy
+scipy
+
+# google
+google
+
 # json
 anyjson
 ujson
 
-# Math
-numpy
-# scipy
+# PDFMiner
+pdfminer
 
-# For ocr
+# For pypdfocr
 pillow>=2.2
 reportlab>=2.7
 watchdog>=0.6.0
@@ -25,8 +32,10 @@ pypdf2>=1.23
 nose
 coverage
 
-# Extraction
-pdfminer
+# For Docx
+#docx>=0.2.4
+olefile
+
 
 # Entity Extraction
 nltk
@@ -37,10 +46,8 @@ phonenumbers
 uszipcode
 python-dateutil
 
-# Others collected from recent branch build
-google
-olefile
-beautifulsoup4
+# Python - Docx
+#git+https://github.com/1For1/python-docx#egg=python-docx
 
 # Kafka
 kafka-python

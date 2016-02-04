@@ -26,6 +26,7 @@ RUN apt-get update \
     && apt-get install -y tesseract-ocr tesseract-ocr-eng \
     && apt-get install -y libjpeg-dev zlib1g-dev antiword \
     && apt-get install -y python-pip python-dev imagemagick poppler-utils \
+    && apt-get install -y libblas-dev liblapack-dev libatlas-base-dev gfortran \
     && pip install -r requirements.txt \
     && mkdir /data \
     && chown -R ocr:ocr /data \
