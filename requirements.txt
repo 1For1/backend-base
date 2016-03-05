@@ -58,3 +58,7 @@ honcho
 
 #Map
 geopy
+
+
+# logging
+celstash
