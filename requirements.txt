@@ -62,3 +62,7 @@ geopy
 
 # logging
 celstash
+logstash>=0.1dev
+
+#machine learning
+sklearn
