@@ -1,4 +1,7 @@
 FROM ubuntu:latest
+
+# Also :16.04, :14.04
+
 MAINTAINER 1For1
 LABEL version="1.0.0"
 
@@ -11,15 +14,17 @@ WORKDIR /app/
 ENV DEBIAN_FRONTEND noninteractive
 
 # REMOVED apt-get install -y apt-transport-https \
-RUN echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list \
+RUN apt-get update \
+    && apt-get install -y apt-transport-https \
+    && echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list \
     && apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
 
+# REMOVED - liblept4 \
 # Base
 RUN apt-get update \
     && apt-get install -y autoconf \
                           build-essential \
                           git \
-                          liblept4 \
                           libleptonica-dev \
                           libgomp1 \
                           libtool \
