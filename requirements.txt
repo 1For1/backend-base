@@ -1,3 +1,13 @@
+##############################
+# machine learning
+sklearn
+pandas
+
+
+##############################
+# From backend
+##############################
+
 # Tasks
 celery
 redis
@@ -10,16 +20,17 @@ pymongo
 
 # Math
 numpy
-scipy
 
 # google
 google
+
 
 # json
 anyjson
 ujson
 
 # PDFMiner
+pdfx
 pdfminer
 
 # For pypdfocr
@@ -45,9 +56,11 @@ probablepeople
 phonenumbers
 uszipcode
 python-dateutil
+tldextract
+esmre
 
 # Python - Docx
-#git+https://github.com/1For1/python-docx#egg=python-docx
+git+https://github.com/1For1/python-docx#egg=python-docx
 
 # Kafka
 kafka-python
@@ -56,7 +69,7 @@ requests
 # Running processes
 honcho
 
-#Map
+# Map
 geopy
 
 
@@ -64,10 +77,12 @@ geopy
 celstash
 logstash>=0.1dev
 
-#machine learning
-sklearn
-pandas
+# linkedin
+mechanize
+
+#
+elasticsearch>=2.0.0,<3.0.0
 
 
-# elasticsearch
-elasticsearch
+# InfluxDB
+influxdb
