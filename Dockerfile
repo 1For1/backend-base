@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:14.04
 
 # Also :16.04, :14.04
 
@@ -25,6 +25,7 @@ RUN apt-get update \
     && apt-get install -y autoconf \
                           build-essential \
                           git \
+                          libept4 \
                           libleptonica-dev \
                           libgomp1 \
                           libtool \
