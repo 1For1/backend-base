@@ -25,7 +25,7 @@ RUN apt-get update \
     && apt-get install -y autoconf \
                           build-essential \
                           git \
-                          libept4 \
+                          liblept4 \
                           libleptonica-dev \
                           libgomp1 \
                           libtool \
