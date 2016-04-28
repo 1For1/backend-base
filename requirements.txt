@@ -1,6 +1,5 @@
 ##############################
 # machine learning
-numpy
 scipy
 sklearn
 pandas
