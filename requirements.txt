@@ -4,6 +4,7 @@ scipy
 sklearn
 pandas
 
+# Remove docx-python from below
 
 ##############################
 # From backend
@@ -61,7 +62,7 @@ tldextract
 esmre
 
 # Python - Docx
-git+https://github.com/1For1/python-docx#egg=python-docx
+#git+https://github.com/1For1/python-docx#egg=python-docx
 
 # Kafka
 kafka-python
