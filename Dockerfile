@@ -29,6 +29,7 @@ RUN apt-get update \
                           libleptonica-dev \
                           libgomp1 \
                           libtool \
+                          libssl-dev \
                           libffi-dev \
     && apt-get install -y python3 python libxml2-dev libxslt1-dev \
     && apt-get install -y tesseract-ocr tesseract-ocr-eng \
