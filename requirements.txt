@@ -23,9 +23,9 @@ pymongo
 # Math
 numpy
 
-# google
+# crawler
 google
-
+scrapy
 
 # json
 anyjson
