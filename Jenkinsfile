@@ -58,7 +58,7 @@ switch ( env.BRANCH_NAME ) {
         parallel (
             ipython: { build '/GitHub-Organization/backend-ipython/master' },
             dind: { build '/GitHub-Organization/backend-jenkins-dind/master' },
-            mesos: { build '/Docker_Images/mesosphere-base' }
+            mesos: { build '/GitHub-Organization/docker-mesosphere-base/master' }
         )
 
         break
