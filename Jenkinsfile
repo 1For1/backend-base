@@ -36,6 +36,7 @@ switch ( env.BRANCH_NAME ) {
         stage 'DockerLatest'
         slackSend color: 'blue', message: "ORG: ${env.JOB_NAME} #${env.BUILD_NUMBER} - Stopping DEV Services"
         node('docker-cmd') {
+            dockerlogin()
             slackSend color: 'blue', message: "ORG: ${env.JOB_NAME} #${env.BUILD_NUMBER} - Removing latest tag"
             // Erase
             dockerrmi('oneforone/backend-base:latest')
@@ -78,6 +79,7 @@ switch ( env.BRANCH_NAME ) {
 // Docker functions
 def dockerlogin() {
     sh "docker -H tcp://10.1.10.210:5001 login -e ${env.DOCKER_EMAIL} -u ${env.DOCKER_USER} -p ${env.DOCKER_PASSWD} registry.1for.one:5000"
+    sh "cat ~/.docker/config.json"
 }
 
 def dockerbuild(label) {
@@ -88,7 +90,7 @@ def dockerstop(vm) {
 }
 
 def dockerrmi(vm) {
-    sh "docker -H tcp://10.1.10.210:5001 rmi -f ${vm} || echo RMI Failed"
+    sh "docker -H tcp://10.1.10.210:5001 rmi -f registry.1for.one:5000/${vm} || echo RMI Failed"
 }
 
 def dockertag(label_old, label_new) {
