@@ -55,11 +55,15 @@ switch ( env.BRANCH_NAME ) {
 
         stage 'Downstream'
         slackSend color: 'blue', message: "ORG: ${env.JOB_NAME} #${env.BUILD_NUMBER} - Building Downstream"
-        parallel (
-            ipython: { build '/GitHub-Organization/backend-ipython/master' },
-            dind: { build '/GitHub-Organization/backend-jenkins-dind/master' },
-            mesos: { build '/GitHub-Organization/docker-mesosphere-base/master' }
-        )
+       try {
+            parallel (
+                ipython: { build '/GitHub-Organization/backend-ipython/master' },
+                dind: { build '/GitHub-Organization/backend-jenkins-dind/master' },
+                mesos: { build '/GitHub-Organization/docker-mesosphere-base/master' }
+            )
+        } catch (err) {
+
+        }
 
         break
 
