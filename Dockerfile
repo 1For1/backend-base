@@ -48,7 +48,8 @@ RUN apt-get update \
     && python -m nltk.downloader -d /usr/share/nltk_data hmm_treebank_pos_tagger \
     && python -m nltk.downloader -d /usr/share/nltk_data maxent_treebank_pos_tagger \
     && python -m nltk.downloader -d /usr/share/nltk_data wordnet \
-    && python -m nltk.downloader -d /usr/share/nltk_data words
+    && python -m nltk.downloader -d /usr/share/nltk_data words \
+    && python -m nltk.downloader -d /usr/share/nltk_data stopwords
 
 # Cleanup
 RUN apt-get purge --auto-remove -y autoconf \
