@@ -51,6 +51,12 @@ RUN apt-get update \
     && python -m nltk.downloader -d /usr/share/nltk_data words \
     && python -m nltk.downloader -d /usr/share/nltk_data stopwords
 
+# ipython
+RUN apt-get -y install libxft-dev libpng12-dev libzmq3-dev libsqlite3-dev sqlite3 zlib1g-dev\
+    && pip install ipython[all] \
+    && pip install ipywidgets matplotlib \
+    && ipython profile create
+
 # Cleanup
 RUN apt-get purge --auto-remove -y autoconf \
                                       build-essential \
