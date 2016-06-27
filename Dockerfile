@@ -58,6 +58,10 @@ RUN apt-get -y install libxft-dev libpng12-dev libzmq3-dev libsqlite3-dev sqlite
     && pip install ipywidgets matplotlib \
     && ipython profile create
 
+# for dbus
+RUN apt-get build-dep libdbus-1-dev -y
+RUN apt-get install python-dbus -y
+
 # Cleanup
 RUN apt-get purge --auto-remove -y autoconf \
                                       build-essential \
