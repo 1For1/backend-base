@@ -24,8 +24,10 @@ pymongo
 numpy
 
 # crawler
+beautifulsoup4==4.4.1
 google
 scrapy
+
 
 # json
 anyjson
