@@ -37,6 +37,10 @@ RUN apt-get update \
     && apt-get install -y python-pip python-dev imagemagick poppler-utils \
     && apt-get install -y libblas-dev liblapack-dev libatlas-base-dev gfortran \
     && apt-get install -y vim \
+    && apt-get install -y apt-get install python-software-properties software-properties-common \
+    && add-apt-repository -y ppa:fkrull/deadsnakes-python2.7 \
+    && apt-get update \
+    && apt-get upgrade -y \
     && pip install numpy \
     && pip install -r requirements.txt \
     && mkdir /data \
