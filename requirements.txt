@@ -10,6 +10,14 @@ pandas
 # From backend
 ##############################
 
+###############################################
+# BACKEND REQUIREMENTS
+#
+# NOTE:
+#   * Update backend-base with any additions
+#   * Update cookbook/1for1/mesos-slave.rb recipe with new requirements (SPARK PROD) -- Discuss with Patrick
+###############################################
+
 # Tasks
 celery
 redis
@@ -23,10 +31,11 @@ pymongo
 # Math
 numpy
 
-# crawler
+# bs4
 beautifulsoup4==4.4.1
+
+# google
 google
-scrapy
 
 
 # json
@@ -39,13 +48,14 @@ pdfminer
 
 # For pypdfocr
 pillow>=2.2
-reportlab>=2.7
+reportlab==3.2.0
 watchdog>=0.6.0
 pypdf2>=1.23
 
 # Test
 nose
 coverage
+nose-timer
 
 # For Docx
 #docx>=0.2.4
@@ -63,8 +73,9 @@ python-dateutil
 tldextract
 esmre
 
+
 # Python - Docx
-#git+https://github.com/1For1/python-docx#egg=python-docx
+git+https://github.com/1For1/python-docx#egg=python-docx
 
 # Kafka
 kafka-python
@@ -76,7 +87,6 @@ honcho
 # Map
 geopy
 
-
 # logging
 celstash
 logstash>=0.1dev
@@ -84,12 +94,29 @@ logstash>=0.1dev
 # linkedin
 mechanize
 
-# ElasticSearch
+# Elasticsearch 2.x
 elasticsearch>=2.0.0,<3.0.0
+
+# Elasticsearch 2.x
 elasticsearch-dsl>=2.0.0,<3.0.0
 
 # InfluxDB
 influxdb
 
-# Azure
+# Scrapy
+Scrapy
+
+
+
+# Bing Search
+py_bing_search
+
+# Azure Storage
+azure
 azure-storage
+
+
+# Azure CDN
+azure-mgmt-cdn==0.30.0rc5
+msrest
+msrestazure
